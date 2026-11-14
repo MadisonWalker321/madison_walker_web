@@ -1,0 +1,22 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<title>{{ if .IsHome }}{{ site.Title }} | {{ site.Params.role }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ site.Params.description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ site.Title }}">
+<meta property="og:description" content="{{ site.Params.description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ if site.Params.mysite.discovery }}<meta name="generator" content="Created using GaryKing.org/mysite (https://gking.harvard.edu/mysite)">{{ end }}
+{{ $css := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+{{ if and .IsHome site.Params.mysite.discovery }}
+{{ $p := dict "@context" "https://schema.org" "@type" "Person" "name" site.Title "affiliation" (dict "@type" "Organization" "name" site.Params.affiliation) "url" site.BaseURL "isBasedOn" "https://gking.harvard.edu/mysite" }}
+<script type="application/ld+json">{{ $p | jsonify | safeJS }}</script>
+{{ end }}
+</head>

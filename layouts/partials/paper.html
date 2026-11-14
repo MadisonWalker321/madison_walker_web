@@ -1,0 +1,6 @@
+{{ $p := . }}
+<article class="paper{{ if $p.job_market_paper }} jmp{{ end }}">
+  <h4>{{ if or $p.pdf $p.link }}<a href="{{ if $p.pdf }}{{ $p.pdf | relURL }}{{ else }}{{ $p.link }}{{ end }}" target="_blank" rel="noopener">{{ $p.title }}</a>{{ else }}{{ $p.title }}{{ end }}</h4>
+  <p class="meta">{{ delimit $p.authors ", " }}{{ if $p.year }} · {{ $p.year }}{{ end }}{{ if $p.venue }} · <em>{{ $p.venue }}</em>{{ end }} <span class="badge">{{ $p.status }}</span></p>
+  {{ if $p.abstract }}<p>{{ $p.abstract }}</p>{{ end }}
+</article>

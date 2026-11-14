@@ -1,0 +1,11 @@
+- group: "Academic"
+  items:
+    - {name: "Dean’s Honors, UC Santa Barbara College of Letters and Science", year: "Fall 2022, Winter 2023, Spring 2023, Fall 2025"}
+    - {name: "Golden Eagle Award, highest GPA in the UCSB NCAA Women’s Water Polo Program", year: "Spring 2024"}
+    - {name: "ACWPC Academic All-American, Outstanding Level", year: "2023, 2024"}
+    - {name: "Big West Academic All-Conference", year: "2024"}
+- group: "Athletics"
+  items:
+    - {name: "Cutino Award Midseason Watchlist", year: "2024"}
+    - {name: "NCAA Division I Women’s Water Polo, Starting Goalkeeper, UC Santa Barbara", year: "2022–2025"}
+    - {name: "USA Water Polo Women’s U20 Junior National Team, domestic roster selection", year: "2023, 2024"}

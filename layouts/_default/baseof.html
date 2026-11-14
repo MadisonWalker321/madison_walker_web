@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+{{ partial "nav.html" . }}
+<main id="main">
+{{ block "main" . }}{{ end }}
+</main>
+{{ partial "footer.html" . }}
+<script>
+(function(){var t=document.getElementById('navtoggle');
+document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){if(t)t.checked=false;});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&location.hash&&location.hash!=='#home')location.hash='home';});})();
+</script>
+</body>
+</html>

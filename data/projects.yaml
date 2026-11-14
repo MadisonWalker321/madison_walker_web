@@ -1,0 +1,8 @@
+- {name: "Python", description: "Scientific computing, astronomical data processing, and photometric analysis."}
+- {name: "JWST MIRI", description: "Mid-infrared imaging observations for direct exoplanet detection and characterization."}
+- {name: "pyKLIP", description: "High-contrast imaging and PSF subtraction using ADI and SDI."}
+- {name: "Orvara", description: "MCMC orbital fitting and dynamical mass determination of companions."}
+- {name: "MKID Pipeline", description: "Processing direct-imaging observations from microwave kinetic inductance detectors."}
+- {name: "NEOExchange", description: "Robotic telescope observation coordination and astronomical data processing."}
+- {name: "Django", description: "Python-based web framework used in developing photometric data-processing tools."}
+- {name: "Photometric analysis", description: "Differential imaging, light-curve extraction, flux measurements, and uncertainty analysis."}

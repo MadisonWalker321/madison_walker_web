@@ -1,0 +1,5 @@
+# AI-readable summary: /llms.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://madisonwalker321.github.io/madison_walker.github.io/sitemap.xml

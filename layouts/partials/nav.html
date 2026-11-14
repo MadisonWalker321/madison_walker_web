@@ -1,0 +1,10 @@
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="{{ "" | relURL }}#home">{{ site.Title }}</a>
+  <input type="checkbox" id="navtoggle" class="navtoggle" aria-label="Toggle menu">
+  <label for="navtoggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+  <ul class="nav-links">
+    {{ range site.Menus.main }}
+    <li><a href="{{ .URL | relURL }}"{{ if hasPrefix .URL "/files/" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</nav>
