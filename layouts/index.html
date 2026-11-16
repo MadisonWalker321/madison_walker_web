@@ -3,7 +3,10 @@
 <header class="hero" id="home">
   <div class="hero-inner">
     <div class="hero-text">
-      <h1>{{ site.Title }}</h1>
+      <div class="name-row">
+        {{ if fileExists "static/images/photo-oval.jpg" }}<img class="oval" src="{{ "images/photo-oval.jpg" | relURL }}" alt="Madison Walker" width="340" height="425">{{ end }}
+        <h1>{{ site.Title }}</h1>
+      </div>
       <p class="lines">{{ $p.role }}<br>{{ $p.affiliation }}<br>Advisor: {{ $p.advisor }}</p>
       <p class="tagline">{{ $p.tagline }}</p>
       <p class="actions">
@@ -60,7 +63,7 @@
 <section class="panel" id="about" aria-labelledby="about-h"><div class="sheet">
   <a class="back" href="#home">← Back</a>
   <h2 id="about-h">About me</h2>
-  {{ if fileExists "static/images/photo.jpg" }}<img class="portrait" src="{{ "images/photo.jpg" | relURL }}" alt="Portrait of Madison Walker" width="200" height="200">{{ end }}
+  {{ if fileExists "static/images/photo.jpg" }}<img class="portrait" src="{{ "images/photo.jpg" | relURL }}" alt="Madison Walker in front of a deep-field galaxy image" width="594" height="539">{{ end }}
   {{ .Content }}
   <h3>Research interests</h3>
   <ul class="tags">{{ range $p.interests }}<li>{{ . }}</li>{{ end }}</ul>
@@ -104,3 +107,4 @@
   {{ range site.Data.awards }}<h3>{{ .group }}</h3><ul class="plain">{{ range .items }}<li>{{ .name }} <span class="meta">{{ .year }}</span></li>{{ end }}</ul>{{ end }}
 </div></section>
 {{ end }}
+
