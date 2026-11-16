@@ -2,7 +2,7 @@
 
 Madison Walker is a Postbaccalaureate SPARK Fellow at the Harvard & Smithsonian Center for Astrophysics, advised by Dr. Rachel Bowens-Rubin. She studies directly imaged exoplanets and planetary-mass companions in circumbinary systems using JWST MIRI and ground-based high-contrast imaging.
 
-- Home: https://madisonwalker321.github.io/madison_walker.github.io/
-- CV: https://madisonwalker321.github.io/madison_walker.github.io/files/cv.pdf
-- Research: https://madisonwalker321.github.io/madison_walker.github.io/#research
-- Contact: https://madisonwalker321.github.io/madison_walker.github.io/#contact
+- Home: https://madisonwalker321.github.io/madison_walker_web/
+- CV: https://madisonwalker321.github.io/madison_walker_web/files/cv.pdf
+- Research: https://madisonwalker321.github.io/madison_walker_web/#research
+- Contact: https://madisonwalker321.github.io/madison_walker_web/#contact
