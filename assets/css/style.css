@@ -43,6 +43,8 @@ section[id],header[id]{scroll-margin-top:var(--nav-h)}
   padding:4rem 1.5rem 3.5rem}
 .hero-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center}
 .hero h1{font:italic 700 clamp(2.4rem,6vw,3.8rem)/1.05 var(--serif);margin:0 0 1rem;color:#fff;background:linear-gradient(100deg,#fff 30%,#ffc2e2 60%,#a9c4ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.name-row{display:flex;align-items:center;gap:1.25rem;margin:0 0 1rem}.name-row h1{margin:0;font-size:clamp(2rem,5vw,3.2rem);white-space:nowrap}
+.oval{width:112px;height:140px;object-fit:cover;object-position:50% 15%;border-radius:50%;border:3px solid var(--accent-dark);box-shadow:0 0 0 3px rgba(143,180,255,.45),0 0 28px rgba(255,95,174,.35);flex:none}
 .lines{margin:0 0 1rem;color:var(--on-dark-muted)}.lines{line-height:1.7}
 .tagline{font:1.2rem/1.5 var(--serif);max-width:34rem;margin:0 0 1.5rem}
 .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin:0}
@@ -81,7 +83,7 @@ section[id],header[id]{scroll-margin-top:var(--nav-h)}
 .back{font-size:.9rem;font-weight:600}
 .meta{font-size:.875rem;color:var(--color-text-muted);margin:0 0 .4rem}
 .item{margin:0 0 1.5rem}
-.portrait{float:right;width:180px;height:180px;object-fit:cover;border-radius:50%;margin:0 0 1rem 1.5rem;border:3px solid var(--color-highlight)}
+.portrait{float:right;width:min(290px,45%);height:auto;border-radius:14px;margin:0 0 1rem 1.5rem;border:3px solid var(--color-highlight)}
 .tags{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:0}
 .tags li{background:#eaf0ff;border:1px solid #b7c8f5;border-radius:999px;padding:.2rem .8rem;font-size:.9rem}
 .paper{margin:0 0 1.25rem}.paper.jmp{background:var(--color-highlight);border-left:1px solid var(--color-accent);padding:1.5rem}
@@ -102,6 +104,9 @@ section[id],header[id]{scroll-margin-top:var(--nav-h)}
   .nav-links a{display:block;padding:.85rem 1.25rem}
   .hero{padding:2.5rem 1.25rem}
   .hero-inner{grid-template-columns:1fr}.hero-art{max-width:300px;order:-1}
-  .sheet{padding:1.5rem 1.25rem}.portrait{float:none;display:block;margin:0 0 1rem}
+  .sheet{padding:1.5rem 1.25rem}.portrait{float:none;display:block;width:100%;max-width:340px;margin:0 0 1rem}.oval{width:84px;height:105px}
   .tools{grid-template-columns:1fr;gap:.1rem}.tools dd{margin-bottom:.6rem}
+}
+@media (max-width:360px){.name-row h1{white-space:normal;font-size:1.8rem}}
+
 }
