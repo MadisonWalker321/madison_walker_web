@@ -1,7 +1,7 @@
 # NOTE: this repo is named madison_walker.github.io, so GitHub serves it as a project site at the URL below.
 # For the shorter https://madisonwalker321.github.io/ address, rename the repo to "madisonwalker321.github.io"
 # and change baseURL to "https://madisonwalker321.github.io/".
-baseURL: "https://madisonwalker321.github.io/madison_walker.github.io/"
+baseURL: "madison_walker_web"
 title: "Madison Walker"
 languageCode: en-us
 
