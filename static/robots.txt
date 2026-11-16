@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://madisonwalker321.github.io/madison_walker.github.io/sitemap.xml
+Sitemap: https://madisonwalker321.github.io/madison_walker_web/sitemap.xml
