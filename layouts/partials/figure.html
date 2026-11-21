@@ -1,0 +1,11 @@
+{{ $f := . }}
+<figure class="fig">
+  <img src="{{ $f.src | relURL }}" alt="{{ $f.alt }}" width="{{ $f.w }}" height="{{ $f.h }}" style="max-width:min(100%,{{ $f.max | default $f.w }}px)" loading="lazy" decoding="async">
+  {{ with $f.checks }}
+  <table class="checks">
+    <thead><tr><th scope="col">Candidate</th>{{ range .columns }}<th scope="col">{{ . }}</th>{{ end }}</tr></thead>
+    <tbody>{{ range .rows }}<tr><th scope="row">{{ .label }}</th>{{ range .pass }}{{ if . }}<td class="ok"><span aria-hidden="true">✓</span><span class="sr">Pass</span></td>{{ else }}<td class="no"><span aria-hidden="true">✗</span><span class="sr">Fail</span></td>{{ end }}{{ end }}</tr>{{ end }}</tbody>
+  </table>
+  {{ end }}
+  <figcaption>{{ with $f.label }}<strong>{{ . }}.</strong> {{ end }}{{ $f.caption }}{{ with $f.credit }}<span class="fig-credit">{{ . | safeHTML }}</span>{{ end }}</figcaption>
+</figure>

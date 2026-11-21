@@ -110,3 +110,20 @@ section[id],header[id]{scroll-margin-top:var(--nav-h)}
 @media (max-width:360px){.name-row h1{white-space:normal;font-size:1.8rem}}
 
 }
+
+/* research figures, proficiency */
+.fig{margin:1.25rem 0 1.75rem;padding:0}
+.fig img{display:block;width:100%;height:auto;margin:0 auto;border-radius:10px;border:1px solid var(--color-border);background:#fff}
+.fig figcaption{font-size:.9rem;line-height:1.5;color:var(--color-text);max-width:70ch;margin:.6rem auto 0}
+.fig figcaption strong{color:var(--color-institution)}
+.fig-credit{display:block;margin-top:.25rem;font-size:.82rem;color:var(--color-text-muted)}
+.fig-note{background:var(--color-highlight);border-left:3px solid var(--color-accent);padding:.6rem .9rem;border-radius:0 8px 8px 0;font-size:.9rem}
+.checks{border-collapse:collapse;margin:.75rem auto 0;font-size:.85rem;background:#fff;border:1px solid var(--color-border);border-radius:8px;overflow:hidden}
+.checks th,.checks td{padding:.35rem .8rem;border-bottom:1px solid var(--color-border);text-align:center}
+.checks tbody th{text-align:left;font-weight:600}.checks thead th{background:#eaf0ff;font-weight:600}
+.checks tr:last-child th,.checks tr:last-child td{border-bottom:0}
+.checks .ok{color:#1f7a4d;font-weight:700;font-size:1.15rem}.checks .no{color:#b3261e;font-weight:700;font-size:1.15rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.level{display:flex;align-items:center;gap:.25rem;margin:0 0 .15rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-muted)}
+.level i{width:.6rem;height:.6rem;border-radius:50%;border:1.5px solid var(--color-institution);display:inline-block}.level i.on{background:var(--color-institution)}
+.lvl-text{margin-left:.35rem}

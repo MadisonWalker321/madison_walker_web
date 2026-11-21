@@ -1,3 +1,12 @@
-- {role: "Organizer, Astronomy on Tap Boston", dates: "October 2026–Present", text: "Assist with trivia and Astro News, and contribute to public outreach events."}
+- role: "Organizer, Astronomy on Tap Boston"
+  dates: "October 2026–Present"
+  text: "Assist with trivia and Astro News, and contribute to public outreach events."
+  figure:
+    src: "images/research/outreach.jpg"
+    w: 1400
+    h: 1050
+    max: 620
+    alt: "Four Astronomy on Tap Boston organizers smiling behind an outreach table with astronomy posters and handouts."
+    caption: "Astronomy on Tap Boston organizers at the outreach table."
 - {role: "Volunteer, Cambridge Explores the Universe", dates: "", text: "Introduced children to the role of telescope filters in astronomical observations through an activity with color and light."}
 - {role: "Volunteer Tutor, UC Santa Barbara", dates: "Fall 2022–Spring 2025", text: "One-on-one tutoring for collegiate athletes in the NCAA Women’s Water Polo Program."}

@@ -3,13 +3,79 @@
   place: "Cambridge, MA"
   dates: "September 2026–Present"
   text: "I investigate potential planetary-mass companions in JWST MIRI direct-imaging observations of the circumbinary system QY Aur. I process observational data using reference differential imaging (RDI) and principal component analysis (PCA) to suppress stellar flux and identify potential companions. I also developed a proposal for JWST follow-up observations to conduct proper-motion verification and assess the validity of candidate companions. A first-author research paper is in preparation."
+  figures:
+    - src: "images/research/qyaur_rgb.jpg"
+      w: 1353
+      h: 1400
+      max: 560
+      label: "Figure 1"
+      alt: "RGB JWST MIRI image of QY Aurigae, a bright diffraction-spiked star at center, with three potential companion candidates circled and numbered."
+      caption: "RGB observations of QY Aurigae taken with the JWST MIRI Imager. Circles mark a few of the potential planetary-mass candidates."
+      credit: "Data: JWST Cycle 4 Hoth Survey, Bowens-Rubin et al."
+    - src: "images/research/candidates.jpg"
+      w: 628
+      h: 568
+      max: 628
+      label: "Figure 2"
+      alt: "RDI and PCA subtracted RGB image of QY Aur with candidates 1 to 3 circled and a point-source model and residual inset."
+      caption: "Candidates and an example of point-source verification checks: SIDERIS background-object probability, high SNR, and a PSF point-source fit (inset: image, model, residuals). RGB image (F1800W, F2100W, F2550W) after RDI and PCA subtraction."
+      credit: "Data: JWST Cycle 4 Hoth Survey, Bowens-Rubin et al."
+      checks:
+        columns: ["SNR > 8", "SIDERIS < 50%", "Point-source PSF"]
+        rows:
+          - {label: "Candidate 1", pass: [true, true, true]}
+          - {label: "Candidate 2", pass: [true, true, true]}
+          - {label: "Candidate 3", pass: [true, false, true]}
+    - src: "images/research/separation.png"
+      w: 629
+      h: 572
+      max: 629
+      label: "Figure 3"
+      alt: "Scatter plot of planet mass versus separation for known circumbinary planets by discovery method, with three QY Aur candidates starred at wide separation and low mass."
+      caption: "All known circumbinary planets alongside the potential QY Aur candidates (stars). If confirmed, these candidates would be the lowest-mass planets discovered at such wide separations with direct imaging."
+      credit: "Known planets: <a href=\"https://doi.org/10.26133/NEA12\" target=\"_blank\" rel=\"noopener\">NASA Exoplanet Archive, Planetary Systems table</a> and <a href=\"https://doi.org/10.26133/NEA40\" target=\"_blank\" rel=\"noopener\">Stellar Hosts table</a>."
 - role: "Science Intern"
   org: "Las Cumbres Observatory (LCO)"
   place: "Goleta, CA"
   dates: "June–August 2026"
   text: "I coordinated and executed observations of the binary asteroid system Didymos using the 2-meter telescope at Siding Spring Observatory through the LCO Robotic Telescope Network. I applied Differential Imaging Analysis to extract light curves and constrain the orbital parameters of the eclipsing binary in support of ESA’s Hera follow-up mission to NASA’s DART planetary defense mission. I also developed a Python wrapper for photometric data extraction and conducted photometric error analysis for quality control, identifying instrumentation issues and data-reduction pipeline failures."
+  note: "The light curve and other image data from this project are proprietary and cannot be shown on this website at this time. The figures below are a schematic and quality-control diagnostics."
+  figures:
+    - src: "images/research/orbit.jpg"
+      w: 1370
+      h: 679
+      max: 700
+      label: "Figure 4"
+      alt: "Schematic of the DART spacecraft striking Dimorphos, which orbits Didymos, with the shortened orbit drawn inside the original orbit."
+      caption: "Schematic (not to scale) of the DART kinetic impact on Dimorphos, which shortened its orbit around Didymos. Observations of the system constrain how that orbit has evolved."
+      credit: "Context: <a href=\"https://doi.org/10.1016/j.actaastro.2024.04.001\" target=\"_blank\" rel=\"noopener\">Chabot et al. 2024</a>."
+    - src: "images/research/airmass.png"
+      w: 622
+      h: 641
+      max: 622
+      label: "Figure 5"
+      alt: "Scatter plot of signal-to-noise ratio versus airmass for Didymos frames, colored by frame number, with two red boxes marking low-SNR frames."
+      caption: "Signal-to-noise ratio (SNR) versus airmass for frames from the July 12, 2026 observations, colored by frame number. SNR falls as airmass rises, as expected (right box), but some frames show abnormally low SNR at low airmass (left box). Red crosses mark frames flagged by SExtractor; only some fall in the low-SNR boxes, so airmass explains only part of the signal loss."
+      credit: "Original data: LCO 2-m telescope, reduced with the <a href=\"https://doi.org/10.1016/j.icarus.2021.114387\" target=\"_blank\" rel=\"noopener\">NEOexchange pipeline (Lister et al. 2021)</a>."
+    - src: "images/research/subtractions.jpg"
+      w: 833
+      h: 655
+      max: 700
+      label: "Figure 6"
+      alt: "Grid of difference-image frames with red boxes around subregions of negative background; two frames show streaks."
+      caption: "Frames flagged by a custom quality filter after difference imaging (badness threshold > 400 and pixel value < -100; standard deviation set to 35; frames with abnormally negative quadrants selected). Red boxes mark the poor subregions. The streaks in frames 0086 and 0090 trace to an inaccurately reported telescope mirror tilt, which biased the background and the measured fluxes."
+      credit: "Original data: LCO 2-m telescope, reduced with the <a href=\"https://doi.org/10.1016/j.icarus.2021.114387\" target=\"_blank\" rel=\"noopener\">NEOexchange pipeline (Lister et al. 2021)</a>."
 - role: "Undergraduate Research Intern"
   org: "Mazin Lab, University of California, Santa Barbara"
   place: "Santa Barbara, CA"
   dates: "April 2024–June 2026"
   text: "Under the supervision of Dr. Ben Mazin, I conducted high-contrast direct-imaging analysis of the K-dwarf system HIP 38514 using observations from the Subaru Telescope’s Microwave Kinetic Inductance Detector (MKID) instrumentation integrated with the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) system, as well as the Coronagraphic High Angular Resolution Imaging Spectrograph (CHARIS). I applied angular and spectral differential imaging (ADI/SDI) techniques using pyKLIP for point-spread function subtraction, developed Python scripts for satellite spot detection and image calibration, and extracted the companion’s spectrum for comparison with known M- and L-type stellar spectra. I also used Orvara, a Markov Chain Monte Carlo (MCMC) orbital-fitting program, to determine the dynamical mass of the companion HIP 38514 b."
+  figures:
+    - src: "images/research/satellite.png"
+      w: 1146
+      h: 989
+      max: 620
+      label: "Figure 7"
+      alt: "CHARIS image with the stellar light masked as a black disk, four green satellite spots around it, and the companion HIP 38514 b glowing at upper right."
+      caption: "Satellite spots (green) and masked stellar light, with the companion HIP 38514 b visible at upper right after applying the satellite-spot locator code."
+      credit: "Data taken with CHARIS (Mazin and Brandt)."

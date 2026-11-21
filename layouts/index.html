@@ -69,13 +69,13 @@
   <ul class="tags">{{ range $p.interests }}<li>{{ . }}</li>{{ end }}</ul>
   <h3>Education</h3>
   {{ range site.Data.education }}<p><strong>{{ .degree }}</strong><br>{{ .institution }}, {{ .years }}{{ with .note }} · {{ . }}{{ end }}</p>{{ end }}
-  <h3>Experience</h3>
-  {{ range site.Data.experience }}<article class="item"><h4>{{ .role }}</h4><p class="meta">{{ .org }} · {{ .place }} · {{ .dates }}</p><p>{{ .text }}</p></article>{{ end }}
 </div></section>
 
 <section class="panel" id="research" aria-labelledby="research-h"><div class="sheet">
   <a class="back" href="#home">← Back</a>
   <h2 id="research-h">Research</h2>
+  {{ with site.Data.experience }}<h3>Experience</h3>
+  {{ range . }}<article class="item exp"><h4>{{ .role }}</h4><p class="meta">{{ .org }} · {{ .place }} · {{ .dates }}</p><p>{{ .text }}</p>{{ with .note }}<p class="fig-note">{{ . }}</p>{{ end }}{{ range .figures }}{{ partial "figure.html" . }}{{ end }}</article>{{ end }}{{ end }}
   {{ $papers := site.Data.papers }}
   {{ $jmp := where $papers "job_market_paper" true }}
   {{ $pubs := where $papers "status" "in" (slice "published" "accepted") }}
@@ -83,7 +83,9 @@
   {{ with $jmp }}<h3>Job market paper</h3>{{ range . }}{{ partial "paper.html" . }}{{ end }}{{ end }}
   {{ with $wip }}<h3>Working papers</h3>{{ range . }}{{ partial "paper.html" . }}{{ end }}{{ end }}
   {{ with $pubs }}<h3>Publications</h3>{{ range . }}{{ partial "paper.html" . }}{{ end }}{{ end }}
-  {{ with site.Data.projects }}<h3>Software and tools</h3><dl class="tools">{{ range . }}<dt>{{ .name }}</dt><dd>{{ .description }}</dd>{{ end }}</dl>{{ end }}
+  {{ with site.Data.projects }}<h3>Software and tools</h3>
+  <p class="meta">Proficiency reflects my experience as a user of these tools, not as their developer.</p>
+  <dl class="tools">{{ range . }}{{ $lv := .level }}{{ $l := slice "" "Working knowledge" "Proficient" "Advanced" }}<dt>{{ .name }}</dt><dd><span class="level" role="img" aria-label="Proficiency: {{ index $l .level }}">{{ range seq 3 }}<i{{ if le . $lv }} class="on"{{ end }}></i>{{ end }}<span class="lvl-text">{{ index $l .level }}</span></span>{{ .description }}</dd>{{ end }}</dl>{{ end }}
 </div></section>
 
 <section class="panel" id="talks" aria-labelledby="talks-h"><div class="sheet">
@@ -98,7 +100,7 @@
   <h3>Teaching</h3>
   {{ range site.Data.teaching }}<article class="item"><h4>{{ .course }}</h4><p class="meta">{{ .role }} · {{ .institution }} · {{ .term }}{{ with .instructor }} · {{ . }}{{ end }}</p>{{ with .text }}<p>{{ . }}</p>{{ end }}</article>{{ end }}
   <h3>Outreach and service</h3>
-  {{ range site.Data.outreach }}<article class="item"><h4>{{ .role }}</h4>{{ with .dates }}<p class="meta">{{ . }}</p>{{ end }}<p>{{ .text }}</p></article>{{ end }}
+  {{ range site.Data.outreach }}<article class="item"><h4>{{ .role }}</h4>{{ with .dates }}<p class="meta">{{ . }}</p>{{ end }}<p>{{ .text }}</p>{{ with .figure }}{{ partial "figure.html" . }}{{ end }}</article>{{ end }}
 </div></section>
 
 <section class="panel" id="honors" aria-labelledby="honors-h"><div class="sheet">
